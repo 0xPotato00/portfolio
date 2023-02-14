@@ -10,8 +10,6 @@ export interface Props extends ComponentPropsWithoutRef<'header'> {
   withNav?: boolean;
 }
 
-
-
 const TopBar: FC<Props> = ({ children, className, ...props }) => {
   return (
     <header

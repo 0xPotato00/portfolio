@@ -3,22 +3,20 @@ import BasicLayout, { Props as BasicLayoutProps } from '../Layout/Layout';
 
 export * from '../Layout/Layout';
 
-export interface Props extends ComponentPropsWithoutRef<'header'> {
-  withNav?: boolean;
-  TopBarProps?: {};
+export interface Props extends ComponentPropsWithoutRef<'header'> {}
 
-}
-
-const DashboardLayout: FC<Props> = ({ TopBarProps, ...props }) => {
+const DashboardLayout: FC<Props> = ({ ...props }) => {
   return (
     <>
-      <BasicLayout
-        {...props}
-        TopBarProps={{
-          ...TopBarProps,
-          withNav: TopBarProps?.withNav ?? true,
-        }}
-      />
+      <BasicLayout {...props}>
+        <div className="flex flex-col flex-1 w-full">
+          <div className="flex flex-col flex-1 w-full">
+            <div className="flex flex-col flex-1 w-full">
+              <div className="flex flex-col flex-1 w-full">{props?.children}</div>
+            </div>
+          </div>
+        </div>
+      </BasicLayout>
     </>
   );
 };

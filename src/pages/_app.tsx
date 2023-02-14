@@ -23,7 +23,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
 
   useEffect(() => {
     if (typeof window === 'undefined' || !ballCanvasRef.current) return;
-    return loadCursor(ballCanvasRef.current);
+    return loadCursor(ballCanvasRef.current as any);
   }, []);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <>
       <Component {...pageProps} />
       <div
-        ref={ballCanvasRef}
+        ref={ballCanvasRef as any}
         className="ball-transitions pointer-events-none fixed z-30 h-6 w-6 rounded-full border border-black bg-transparent opacity-0 shadow-md duration-200 dark:border-white"
       />
     </>
