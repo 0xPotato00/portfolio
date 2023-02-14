@@ -1,7 +1,7 @@
-import Button from '.././Button/'
+import Button from '.././Button/';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
-import { ButtonBaseProps } from '../Button/ButtonBase'
+import { ButtonBaseProps } from '../Button/ButtonBase';
 import { FC, forwardRef, ReactNode } from 'react';
 
 export interface Props extends ButtonBaseProps {
@@ -19,7 +19,7 @@ const MainNavButton: FC<Props> = forwardRef((props, ref) => {
       aria-current={String(isActive)}
       className={classNames(
         'normal-case text-white hover:opacity-100 focus:opacity-100',
-        isActive ? 'opacity-100' : 'opacity-60'
+        isActive ? 'opacity-100' : 'opacity-60',
       )}
       {...props}
       ref={ref}

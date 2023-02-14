@@ -8,7 +8,6 @@ export interface Props {
   children: ReactNode;
 }
 
-
 const MainNavButton: FC<Props> = forwardRef((props, ref) => {
   const router = useRouter();
   const isActive = router.pathname.includes(props.href);
@@ -19,7 +18,7 @@ const MainNavButton: FC<Props> = forwardRef((props, ref) => {
       aria-current={String(isActive)}
       className={classNames(
         'normal-case text-white hover:opacity-100 focus:opacity-100',
-        isActive ? 'opacity-100' : 'opacity-60'
+        isActive ? 'opacity-100' : 'opacity-60',
       )}
       {...props}
       ref={ref}

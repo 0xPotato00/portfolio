@@ -28,8 +28,7 @@ const HamburgerMenu = () => {
                 as="a"
                 className="group normal-case w-full flex items-center justify-between font-medium text-black dark:text-white text-base"
               >
-                <UserCircleIcon className="group-hover:fill-yellow-500 h-5 w-5" />{' '}
-                Profile
+                <UserCircleIcon className="group-hover:fill-yellow-500 h-5 w-5" /> Profile
               </Button>
             </Menu.Item>
             <Menu.Item as={Link} href="/logout" passHref>

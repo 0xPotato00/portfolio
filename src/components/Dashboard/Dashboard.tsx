@@ -1,8 +1,6 @@
 import { FC } from 'react';
 import { CreateEnvironmentProvider } from '@/components/CreateEnvironment';
-import BasicLayout, {
-  Props as BasicLayoutProps,
-} from '../Layout/Layout';
+import BasicLayout, { Props as BasicLayoutProps } from '../Layout/Layout';
 
 export * from '../Layout/Layout';
 
