@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn prettier --write --ignore-path .gitignore . && yarn lint 
+yarn prettier --write . && yarn lint

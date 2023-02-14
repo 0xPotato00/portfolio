@@ -7,7 +7,10 @@ import HamburgerMenu from '../elements/HamburgerMenu';
 export interface Props extends ComponentPropsWithoutRef<'header'> {
   children?: React.ReactNode;
   className?: string;
+  withNav?: boolean;
 }
+
+
 
 const TopBar: FC<Props> = ({ children, className, ...props }) => {
   return (
