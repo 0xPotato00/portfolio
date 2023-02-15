@@ -24,10 +24,10 @@ const TopBar: FC<Props> = ({ children, className, ...props }) => {
     >
       <div className="h-24 container mx-auto flex items-center justify-around">
         <div className="w-80 flex justify-evenly">
-          <Link href="/vvvv">
+          <Link href="/about">
             <Button className="flex items-center">Home</Button>
           </Link>
-          <Link href="/fffff">
+          <Link href="/">
             <Button className="flex items-center">About</Button>
           </Link>
           <Link href="/gggg">

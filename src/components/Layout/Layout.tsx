@@ -6,11 +6,9 @@ import Top from '@/components/Top';
 
 export interface Props extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
-  drawer?: ReactNode;
-  drawerOpen?: boolean;
 }
 
-const BasicLayout: FC<Props> = ({ children, drawer, drawerOpen, ...props }) => {
+const BasicLayout: FC<Props> = ({ children, ...props }) => {
   return (
     <div {...props}>
       <Top />
