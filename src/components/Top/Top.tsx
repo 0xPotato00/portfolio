@@ -37,7 +37,7 @@ const TopBar: FC<Props> = ({ children, className, ...props }) => {
         <nav className="sm:relative flex items-center space-x-3 justify-end">
           <div className="flex items-center space-x-2">
             <div></div>
-            <HamburgerMenu />
+            HELLO
           </div>
         </nav>
       </div>
