@@ -8,7 +8,7 @@ const Home = ({ ...props }) => {
           <h1 className="text-2xl text-white primary ml-50">
             4
             <b className="bold">
-              <div className="animate-spin w-10">0</div>
+              <div className="animate-spin w-10">000000</div>
             </b>
             4
           </h1>

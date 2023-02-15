@@ -3,6 +3,7 @@ import Link from 'next/link';
 import classNames from 'classnames';
 import MainNavButton from '../elements/MenuButton/MenuButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
+import Button from '../elements/Button';
 
 export interface Props extends ComponentPropsWithoutRef<'header'> {
   children?: React.ReactNode;
@@ -11,6 +12,7 @@ export interface Props extends ComponentPropsWithoutRef<'header'> {
 }
 
 const TopBar: FC<Props> = ({ children, className, ...props }) => {
+  let MainNavButton = 'div';
   return (
     <header
       {...props}
@@ -20,32 +22,18 @@ const TopBar: FC<Props> = ({ children, className, ...props }) => {
         className,
       )}
     >
-      <div className="h-24 px-7 container mx-auto flex items-center justify-between">
-        {true ? (
-          <Link href="/">
-            <h1 className="flex items-center"></h1>
+      <div className="h-24 container mx-auto flex items-center justify-around">
+        <div className="w-80 flex justify-evenly">
+          <Link href="/vvvv">
+            <Button className="flex items-center">Home</Button>
           </Link>
-        ) : (
-          <nav aria-label="primary" className="font-display flex items-center lg:space-x-5">
-            <Link passHref href="/">
-              <h1 className="cursor-pointer">ssss</h1>
-            </Link>
-
-            <div className="hidden md:flex items-center">
-              <Link href="/environments" passHref>
-                <MainNavButton href="/environments">Environments</MainNavButton>
-              </Link>
-              <Link href="/wallets" passHref>
-                <MainNavButton href="/wallets">Wallets</MainNavButton>
-              </Link>
-              <Link href="/faucet" passHref>
-                <MainNavButton href="/faucet">Faucet</MainNavButton>
-              </Link>
-              <MainNavButton href="kkk">Logs</MainNavButton>
-              <MainNavButton href="href">Docs</MainNavButton>
-            </div>
-          </nav>
-        )}
+          <Link href="/fffff">
+            <Button className="flex items-center">About</Button>
+          </Link>
+          <Link href="/gggg">
+            <Button className="flex items-center">Passion</Button>
+          </Link>
+        </div>
         <nav className="sm:relative flex items-center space-x-3 justify-end">
           <div className="flex items-center space-x-2">
             <div></div>

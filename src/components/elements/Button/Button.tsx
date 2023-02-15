@@ -10,6 +10,7 @@ export interface ButtonProps extends ButtonBaseProps {
   disabled?: boolean;
   href?: string;
   loading?: boolean;
+  hover?: boolean;
 }
 
 export const Button: FC<ButtonProps> = forwardRef(
