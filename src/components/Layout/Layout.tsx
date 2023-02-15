@@ -1,23 +1,12 @@
 import { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
 import classNames from 'classnames';
-import Top from '@/components/Top';
+import TopBar from '@/components/TopBar';
 // import BottomBar from './components/BottomBar';
 // import classNames from 'classnames';
 
 export interface Props extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
 }
-
-const BasicLayout: FC<Props> = ({ children, ...props }) => {
-  return (
-    <div {...props}>
-      <Top />
-      <div className="flex flex-col min-h-screen">
-        <div className="flex-1">{children}</div>
-      </div>
-    </div>
-  );
-};
 
 export interface WithSidebarProps {
   children: ReactNode;
@@ -40,5 +29,3 @@ export const WithSidebar: FC<WithSidebarProps> = ({ children, sidebar }) => {
 export const WithContainer: FC<ComponentPropsWithoutRef<'div'>> = ({ className, ...props }) => {
   return <div {...props} className={classNames('container mx-auto px-7 min-h-screen', className)} />;
 };
-
-export default BasicLayout;

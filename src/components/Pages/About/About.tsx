@@ -1,4 +1,4 @@
-import HamburgerMenu from '../elements/HamburgerMenu';
+import HamburgerMenu from '../../elements/HamburgerMenu';
 import Link from 'next/link';
 import { ComponentPropsWithoutRef, FC } from 'react';
 import classNames from 'classnames';

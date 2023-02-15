@@ -1,7 +1,7 @@
 import { ComponentPropsWithoutRef, FC } from 'react';
-import BasicLayout, { Props as BasicLayoutProps, WithContainer } from '../Layout/Layout';
-
-export * from '../Layout/Layout';
+import BasicLayout, { BasicLayoutProps } from '../elements/BasicLayout';
+import { WithContainer } from '../Layout/Layout';
+import TopBar from '../TopBar';
 
 export interface Props extends ComponentPropsWithoutRef<'div'>, BasicLayoutProps {
   children: React.ReactNode;
@@ -12,6 +12,7 @@ const DashboardLayout: FC<Props> = ({ children, ...props }) => {
     <>
       <BasicLayout {...props}>
         <WithContainer>
+          <TopBar />
           <div className="flex flex-col min-h-screen bg-white">{children}</div>
         </WithContainer>
       </BasicLayout>
