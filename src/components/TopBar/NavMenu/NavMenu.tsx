@@ -8,14 +8,14 @@ export interface NavProps extends ComponentPropsWithoutRef<'nav'> {
   links?: string[];
 }
 
-const bools = [
+const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/About' },
   { name: 'Contact', href: '/Contact' },
 ];
 
 const NavMenu: FC<NavProps> = ({ children, links, ...props }) => {
-  const navLinks = bools.map((link, iterator) => {
+  const menu = navLinks.map((link, iterator) => {
     return (
       <Link href={link.href} key={iterator}>
         <Button className="flex items-center">{link.name}</Button>
@@ -23,8 +23,11 @@ const NavMenu: FC<NavProps> = ({ children, links, ...props }) => {
     );
   });
   return (
-    <div className="h-24 container mx-auto flex items-center justify-end">
-      <div className="w-80 flex justify-evenly">{navLinks}</div>
+    <div className="h-24 container mx-auto flex items-center justify-start">
+      <div className="w-24 h-24 mr-80 flex-row justify-center p-2">
+        <img src="/parlor4.svg" alt="logo" className="w-20 h-20 rounded-full" />
+      </div>
+      <div className="w-80 flex justify-evenly ml-auto">{menu}</div>
     </div>
   );
 };

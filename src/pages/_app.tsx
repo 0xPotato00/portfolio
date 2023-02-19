@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app';
 import { loadCursor } from '@/utils/cursorAnimation';
 import { useEffect, useRef, useState } from 'react';
 import DashboardLayout from '@/components/Dashboard/Dashboard';
+import Card from '@/components/elements/Card';
+import CardList from '@/components/elements/CardList';
 
 export default function App({ Component, pageProps, router }: AppProps) {
   const [mobileView, setMobileView] = useState(false);
