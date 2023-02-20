@@ -6,7 +6,7 @@ export interface BasicLayoutProps {
 
 const BasicLayout: FC<BasicLayoutProps> = ({ children, ...props }) => {
   return (
-    <div className="flex flex-col min-h-screen" {...props}>
+    <div className="flex flex-col min-h-screen bg-white" {...props}>
       <div className="flex-1">{children}</div>
     </div>
   );

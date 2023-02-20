@@ -48,10 +48,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <>
       <DashboardLayout>
         <Component {...pageProps} />
-        <div
-          ref={ballCanvasRef as any}
-          className="ball-transitions pointer-events-none fixed z-30 h-6 w-6 rounded-full border  bg-black opacity-40 shadow-lg duration-200 dark:border-white dark:bg-transparent dark:opacity-0 dark:shadow-none dark:border-black dark:bg-black dark:opacity-0 dark:duration-0"
-        />
+        <div ref={ballCanvasRef as any} className="ball-transitions pointer-events-none fixed z-30 h-6 w-6 rounded-full border" />
       </DashboardLayout>
     </>
   );

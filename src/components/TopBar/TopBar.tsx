@@ -16,7 +16,7 @@ const TopBar: FC<Props> = ({ children, className, ...props }) => {
     <header
       {...props}
       className={classNames(
-        'w-full z-30 top-0 bg-black text-white dark:bg-gray-900 drop-shadow',
+        'w-full z-30 top-0 bg-black text-white bg-white',
         { sticky: !className?.includes('fixed') },
         className,
       )}
