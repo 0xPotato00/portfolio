@@ -18,7 +18,7 @@ const NavMenu: FC<NavProps> = ({ children, links, ...props }) => {
   const menu = navLinks.map((link, iterator) => {
     return (
       <Link href={link.href} key={iterator}>
-        <Button className="flex items-center">{link.name}</Button>
+        <Button className="flex items-center font-light">{link.name}</Button>
       </Link>
     );
   });

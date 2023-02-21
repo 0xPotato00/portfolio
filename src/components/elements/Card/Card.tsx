@@ -11,9 +11,13 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ pictureUrl, bio }) => {
   return (
-    <div className="flex flex-col justify-center items-center p-2 rounded-xl shadow-xl">
-      <CardImage pictureUrl={pictureUrl} />
-      <CardBio bio={bio} title="Tourmaline" />
+    <div className="flex flex-col ">
+      <div className="flex flex-row justify-center items-center rounded-xl">
+        <CardImage pictureUrl={pictureUrl} />
+      </div>
+      <div>
+        <CardBio bio={bio} title="Tourmaline" />
+      </div>
     </div>
   );
 };

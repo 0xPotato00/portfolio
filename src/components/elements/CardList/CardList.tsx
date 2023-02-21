@@ -8,10 +8,10 @@ export interface CardListProps {
 
 const CardList: FC<CardListProps> = ({ children }) => {
   return (
-    <div className="flex justify-evenly items-center">
-      <Card bio="hahahah" pictureUrl="/4.JPEG" className="w-30" />
-      <Card bio="hahahah" pictureUrl="/4.JPEG" className="w-30" />
-      <Card bio="hahahah" pictureUrl="/4.JPEG" className="w-30" />
+    <div className="flex justify-evenly items-center align-center mt-5">
+      <Card bio="hahahah" pictureUrl="/4.JPEG" />
+      <Card bio="hahahah" pictureUrl="/4.JPEG" />
+      <Card bio="hahahah" pictureUrl="/4.JPEG" />
     </div>
   );
 };

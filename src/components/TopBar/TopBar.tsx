@@ -15,11 +15,7 @@ const TopBar: FC<Props> = ({ children, className, ...props }) => {
   return (
     <header
       {...props}
-      className={classNames(
-        'w-full z-30 top-0 bg-black text-white bg-white',
-        { sticky: !className?.includes('fixed') },
-        className,
-      )}
+      className={classNames('w-full z-30 top-0 bg-white  ', { sticky: !className?.includes('fixed') }, className)}
     >
       <NavMenu />
     </header>
