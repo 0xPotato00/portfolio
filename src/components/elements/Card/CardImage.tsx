@@ -6,15 +6,10 @@ interface CardImageProps {
   width?: number;
 }
 
-const CardImage: FC<CardImageProps> = ({ pictureUrl, width }) => {
+const CardImage: FC<CardImageProps> = ({ pictureUrl }) => {
   return (
-    <div className="bg-white shadow-inner">
-      <div className="relative overflow-hidden mw-10">
-        <Image src={pictureUrl} width={300} height={300} className="rounded-xl" alt="lol" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-gray-200 rounded-fullshadow-xl"></div>
-        </div>
-      </div>
+    <div className="bg shadow-inner flex flex-row justify-center">
+      <img src={pictureUrl} className="rounded-full w-96 h-96" />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { ComponentPropsWithoutRef, FC } from 'react';
 import Link from 'next/link';
 import Button from '@/components/elements/Button';
 import Image from 'next/image';
+import { SiInstagram } from 'react-icons/si';
 
 export interface NavProps extends ComponentPropsWithoutRef<'nav'> {
   children?: React.ReactNode;
@@ -9,9 +10,8 @@ export interface NavProps extends ComponentPropsWithoutRef<'nav'> {
 }
 
 const navLinks = [
-  { name: 'Home', href: '/' },
   { name: 'About', href: '/About' },
-  { name: 'Contact', href: '/Contact' },
+  { href: 'https://www.instagram.com/gemsparlor/', name: <SiInstagram /> },
 ];
 
 const NavMenu: FC<NavProps> = ({ children, links, ...props }) => {

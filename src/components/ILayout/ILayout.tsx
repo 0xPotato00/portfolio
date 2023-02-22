@@ -12,7 +12,7 @@ const ILayout: FC<Props> = ({ children, ...props }) => {
   return (
     <WithContainer>
       <TopBar className="fixed" />
-      <div className="flex flex-col min-h-screen bg-white mt-36">{children}</div>
+      <div className="flex flex-col min-h-screen mt-36">{children}</div>
     </WithContainer>
   );
 };
