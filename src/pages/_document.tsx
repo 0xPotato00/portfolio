@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* eslint-disable-next-line @next/next/no-title-in-document-head */}
-          <title>0xxx - Bananan</title>
+          <title>Gems Parlor</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link
@@ -15,13 +15,13 @@ class MyDocument extends Document {
           />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <link rel="icon" href="/base.svg" />
-          <meta key="subject" name="subject" content="banana" />
+          <meta key="subject" name="subject" content="Gems Parlor" />
           <meta key="robots" name="robots" content="index,follow" />
           <meta key="og_type" property="og:type" content="website" />
-          <meta key="og_title" property="og:title" content="0xBanana----........" />
-          <meta name="description" content="Bananas are vital for health" />
+          <meta key="og_title" property="og:title" content="Gems Parlor" />
+          <meta name="description" content="Fine Gems and Jewels" />
         </Head>
-        <body className="antialiased font-sans bg-yellow-300 dark:bg-gray-900">
+        <body className="antialiased">
           <Main />
           <NextScript />
         </body>

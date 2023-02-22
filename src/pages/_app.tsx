@@ -2,8 +2,8 @@ import './styles/globals.css';
 import type { AppProps } from 'next/app';
 import { loadCursor } from '@/utils/cursorAnimation';
 import { useEffect, useRef, useState } from 'react';
-import ILayout from '@/components/Dashboard/Dashboard';
-import { WithContainer } from '@/components/Layout';
+import ILayout from '@/components/ILayout/ILayout';
+import WithContainer from '@/components/elements/WithContainer';
 
 export default function App({ Component, pageProps, router }: AppProps) {
   const [mobileView, setMobileView] = useState(false);
@@ -46,13 +46,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <ILayout>
-        <WithContainer>
-          <Component {...pageProps} />
-          <div
-            ref={ballCanvasRef as any}
-            className="ball-transitions pointer-events-none fixed z-30 h-6 w-6 rounded-full border"
-          />
-        </WithContainer>
+        <Component {...pageProps} />
+        <div ref={ballCanvasRef as any} className="ball-transitions pointer-events-none fixed z-30 h-6 w-6 rounded-full border" />
       </ILayout>
     </>
   );

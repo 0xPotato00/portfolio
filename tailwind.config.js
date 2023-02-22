@@ -1,61 +1,56 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
-const pink = {
-  100: '#FF8FEA',
-  300: '#FF78C9',
-  400: '#FF00E5',
-  500: '#ED2CA0',
-  600: '#E80093',
-  700: '#CF0083',
-  800: '#F81AD4',
-};
-
-const purple = {
-  500: '#B00AFF',
-};
-
-const yellow = {
-  100: '#FFE2A2',
-  200: '#FFD600',
-  300: '#FFD200',
-  500: '#FFA800',
-  800: '#FF9B00',
-  900: '#F87A37',
-};
-
-const teal = {
-  300: '#B0FF73',
-  500: '#47FFE9',
-  600: '#06FCFC',
-};
-
-const red = { 600: '#FF795B', 700: '#FF4B61' };
+const colors = require('tailwindcss/colors')
 
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@nft42/react/**/*.{js,ts,jsx,tsx}',
-  ],
+  mode: 'jit',
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        display: ['Poppins', ...defaultTheme.fontFamily.sans],
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: [ 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
+      gradientColorStops: {
+        'yellow-to-green': {
+          from: '#fcd34d',
+          to: '#7bc67e',
+        },
       },
       colors: {
-        pink,
-        purple,
-        yellow,
-        teal,
-        red,
+        transparent: 'transparent',
+        current: 'currentColor',
+        black: colors.black,
+        white: colors.white,
+        gray: colors.coolGray,
+        red: colors.red,
+        yellow: colors.amber,
+        green: colors.green,
+        blue: colors.blue,
+        indigo: colors.indigo,
+        purple: colors.purple,
+        pink: colors.pink,
       },
       fontSize: {
-        '2xl': ['1.875rem', '2rem'],
-        '3xl': ['2.25rem', '3.7rem'],
-        '4xl': ['2.5rem', '3.7rem'],
+        'xs': '.75rem',    // 12px
+        'sm': '.875rem',   // 14px
+        'base': '1rem',    // 16px
+        'lg': '1.125rem',  // 18px
+        'xl': '1.25rem',   // 20px
+        '2xl': '1.5rem',   // 24px
+        '3xl': '1.875rem', // 30px
+        '4xl': '2.25rem',  // 36px
+        '5xl': '3rem',     // 48px
+      },
+      fontWeight: {
+        'normal': 400,
+        'medium': 500,
+        'semibold': 600,
+        'bold': 700,
       },
     },
   },
+  variants: {
+    extend: {},
+  },
   plugins: [],
-};
+}
