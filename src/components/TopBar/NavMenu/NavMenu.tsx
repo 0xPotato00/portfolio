@@ -18,14 +18,14 @@ const NavMenu: FC<NavProps> = ({ children, links, ...props }) => {
   const menu = navLinks.map((link, iterator) => {
     return (
       <Link href={link.href} key={iterator} passHref>
-        <Button className="flex items-center font-light text-black">{link.name}</Button>
+        <Button className="flex items-center font-light text-black text-sm font-serif">{link.name}</Button>
       </Link>
     );
   });
   return (
-    <div className="w-11/12 h-auto  flex flex-row justify-start">
-      <Image src="/logo.svg" alt="cave" width={90} height={90} className="rounded-full" />
-      <div className="flex flex-row ml-auto px-10">{menu}</div>
+    <div className="w-full h-auto  flex flex-row">
+      <Image src="/logo.svg" alt="cave" width={90} height={90} className="rounded-full ml-10" />
+      <div className="flex flex-row ml-auto">{menu}</div>
     </div>
   );
 };
