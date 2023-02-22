@@ -16,9 +16,7 @@ const Home = ({ ...props }) => {
         </div>
       </div>
 
-      <div className="shadow-2xl bg-clip-content rounded-b-xl flex flex-row justify-evenly items-center mt-10">
-        <CardList />
-      </div>
+      <CardList />
     </WithContainer>
   );
 };

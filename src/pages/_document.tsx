@@ -21,7 +21,7 @@ class MyDocument extends Document {
           <meta key="og_title" property="og:title" content="Gems Parlor" />
           <meta name="description" content="Fine Gems and Jewels" />
         </Head>
-        <body className="antialiased  bg-repeat" style={{ backgroundImage: "url('/scales.svg')" }}>
+        <body className="antialiased bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/wave2.svg')" }}>
           <Main />
           <NextScript />
         </body>

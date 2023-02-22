@@ -9,7 +9,7 @@ interface CardImageProps {
 const CardImage: FC<CardImageProps> = ({ pictureUrl }) => {
   return (
     <div className="bg shadow-inner flex flex-row justify-center">
-      <img src={pictureUrl} className="rounded-full w-96 h-96" />
+      <img src={pictureUrl} className=" w-96 h-96 rounded-2xl" />
     </div>
   );
 };
