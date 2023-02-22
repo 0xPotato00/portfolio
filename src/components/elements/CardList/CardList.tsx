@@ -1,4 +1,3 @@
-import { WithContainer } from '@/components/elements/WithContainer';
 import { FC } from 'react';
 import Card from '../Card/Card';
 
