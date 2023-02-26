@@ -6,7 +6,9 @@ export interface Props extends ComponentPropsWithoutRef<'div'> {
 }
 
 export const WithContainer: FC<ComponentPropsWithoutRef<'div'>> = ({ className, ...props }) => {
-  return <div {...props} className={classNames('container mx-auto px-7 min-h-screen', className)} />;
+  return (
+    <div {...props} className={classNames('container mx-auto px-7 min-h-screen max-w-screen-xl px-5 md:px-20', className)} />
+  );
 };
 
 export default WithContainer;

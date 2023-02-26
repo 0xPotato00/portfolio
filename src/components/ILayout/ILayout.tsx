@@ -10,10 +10,10 @@ export interface Props extends ComponentPropsWithoutRef<'div'>, BasicLayoutProps
 
 const ILayout: FC<Props> = ({ children, ...props }) => {
   return (
-    <WithContainer>
+    <>
       <TopBar className="fixed mb-20" />
-      <div className="flex flex-col min-h-screen mt-36">{children}</div>
-    </WithContainer>
+      <div className="flex flex-row justify-center min-h-screen mt-36 max-w-screen-2xl px-5 md:px-20 m-auto">{children}</div>
+    </>
   );
 };
 

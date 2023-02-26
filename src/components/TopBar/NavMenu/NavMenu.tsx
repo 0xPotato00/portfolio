@@ -23,7 +23,7 @@ const NavMenu: FC<NavProps> = ({ children, links, ...props }) => {
     );
   });
   return (
-    <div className="w-full h-auto  flex flex-row">
+    <div className="flex flex-row justify-center items-center mx-auto max-w-screen-2xl">
       <Image src="/logo.svg" alt="cave" width={90} height={90} className="rounded-full ml-10" />
       <div className="flex flex-row ml-auto">{menu}</div>
     </div>

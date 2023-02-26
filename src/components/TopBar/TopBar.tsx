@@ -13,7 +13,10 @@ export interface Props extends ComponentPropsWithoutRef<'header'> {
 
 const TopBar: FC<Props> = ({ children, className, ...props }) => {
   return (
-    <header {...props} className={classNames('w-11/12 z-30 top-3 left-0 ', { sticky: !className?.includes('fixed') }, className)}>
+    <header
+      {...props}
+      className={classNames('w-full z-30 top-3 bg-lime-800 ', { sticky: !className?.includes('fixed') }, className)}
+    >
       <NavMenu />
     </header>
   );
